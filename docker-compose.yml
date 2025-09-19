@@ -1,0 +1,21 @@
+
+version: "3.9"
+services:
+  web:
+    build: ./web
+    ports:
+      - "8080:5000"
+    environment:
+      - FLASK_APP=app:create_app
+      - FLASK_RUN_PORT=5000
+      - JWT_SECRET_KEY=kiasu_rs256_secr3t!@#
+      - DATABASE_URL=postgresql://ctf_user:insecure@db/postgres
+    depends_on:
+      - db
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=ctf_user
+      - POSTGRES_PASSWORD=insecure
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

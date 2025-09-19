@@ -1,0 +1,27 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="mb-4" data-aos="fade-right">Admin Login (totally secure 🤫)</h2>
+<form method="post" class="mb-4" data-aos="fade">
+  <div class="input-group">
+    <input type="text" name="username" class="form-control" placeholder="username payload here">
+    <button class="btn btn-primary">Fire!</button>
+  </div>
+</form>
+{% if query %}
+<div class="row g-3">
+  <div class="col-md-6">
+    <div class="card bg-secondary bg-opacity-50">
+      <div class="card-header">Query</div>
+      <div class="card-body"><code>{{ query }}</code></div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card bg-secondary bg-opacity-50">
+      <div class="card-header">Result</div>
+      <div class="card-body">{{ result }}</div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

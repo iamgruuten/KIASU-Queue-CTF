@@ -1,0 +1,14 @@
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left,#0d1b2a,#000);
+}
+.glass-card{
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+#queue-counter{
+  text-shadow:0 0 15px rgba(0,255,255,0.7);
+}

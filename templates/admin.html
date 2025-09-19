@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Admin Interface</title></head>
+  <body>
+    <h1>Kiasu Queue Admin Login (SQLi vuln)</h1>
+    <form method="POST">
+      <label>Username / Injection:</label><br>
+      <input type="text" name="username" size="100">
+      <button type="submit">Run</button>
+    </form>
+    {% if query %}
+      <h2>Executed Query</h2>
+      <pre>{{ query }}</pre>
+      <h2>Result</h2>
+      <pre>{{ result }}</pre>
+    {% endif %}
+  </body>
+</html>

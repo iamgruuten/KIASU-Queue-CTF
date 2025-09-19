@@ -1,0 +1,22 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8 text-center">
+    <h1 class="display-5 mb-4" data-aos="zoom-in">Welcome to the <span class="text-warning">Kiasu</span> Queue!</h1>
+    <p data-aos="fade">Can you cut your way to the front?</p>
+
+    <div class="glass-card p-4 my-4">
+      <h2 class="mb-0">Current Queue Length</h2>
+      <div id="queue-counter" class="display-3 fw-bold text-info">{{ max_queue }}</div>
+    </div>
+
+    <button id="join-btn" class="btn btn-success btn-lg shadow-lg" data-aos="flip-up">Join Queue</button>
+
+    <div id="your-pos-wrapper" class="mt-5 invisible">
+      <h3>Your Position:</h3>
+      <div id="your-pos" class="display-4"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

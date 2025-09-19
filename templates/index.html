@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kiasu Queue System</title>
+  </head>
+  <body>
+    <h1>Kiasu Queue System</h1>
+    <button id="join">Join Queue</button>
+
+    <!-- TODO: Admin login at /admin-kiasu-interface (WIP) -->
+    <!-- SVG Easter Egg -->
+    <svg width="0" height="0" style="display:none;">
+      <path data-secret="U2VjcmV0X2tleToga2lhc3VfcnMyNTZfc2VjcjN0IUAj" />
+    </svg>
+
+    <script>
+      document.getElementById("join").onclick = () => {
+        fetch("/join", {method:"POST"})
+          .then(r => r.text())
+          .then(html => document.write(html));
+      };
+    </script>
+  </body>
+</html>
